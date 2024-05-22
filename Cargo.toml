@@ -1,0 +1,21 @@
+[package]
+name = "mfa-prac"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = {version="*",features=["derive"]}
+serde_json = "*"
+
+axum = {version="*",features=["ws","macros"]}
+axum-extra = { version = "*", features = ["typed-header"] }
+tokio = { version = "*", features = ["rt", "rt-multi-thread", "net", "time", "macros"] }
+tracing = "*"
+tracing-subscriber = { version = "*", features = ["env-filter"] }
+
+base32 = "*"
+chrono = { version = "*", features = ["serde"] }
+
+uuid = { version = "*", features = ["v4"] }
+totp-rs = "5.4.0"
+rand = "*"
