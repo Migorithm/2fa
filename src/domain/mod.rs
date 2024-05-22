@@ -37,7 +37,7 @@ impl Mfa {
 
         let otp_base32 = totp.get_secret_base32();
 
-        let issuer = "Beringlab";
+        let issuer = "migorithm";
         let otp_auth_url =
             format!("otpauth://totp/{issuer}:{email}?secret={otp_base32}&issuer={issuer}");
 
